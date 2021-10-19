@@ -23,7 +23,9 @@
       <td style="width:30%;"></td>
     </tr>
        <tr>
-      <td style="width:30%;"></td>
+      <td style="width:30%;vertical-align:top;">
+          <asp:Image ID="Image1" runat="server" Height="100%" ImageUrl="~/Images/home.PNG" Width="100%" />
+           </td>
       <td style="width:30%;">
 
 
@@ -89,7 +91,9 @@
 
 
       </td>
-      <td style="width:30%;"></td>
+      <td style="width:30%;vertical-align:top;">
+          <asp:Image ID="Image2" runat="server" Height="100%" ImageUrl="~/Images/home.PNG" Width="100%" />
+           </td>
     </tr>
   </tbody>
 </table>
