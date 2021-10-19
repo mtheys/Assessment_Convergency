@@ -34,7 +34,7 @@
                               <asp:Label ID="Label1" runat="server" Text="Total Loan Amount"></asp:Label>
                           </td>
                             <td style="text-align:left;">
-                                <asp:TextBox ID="TextBox1" runat="server" Width="212px"></asp:TextBox>
+                                <asp:TextBox ID="txtPrincipalAmount" runat="server" Width="212px"></asp:TextBox>
                           </td>
                       </tr>
                       <tr>
@@ -42,7 +42,7 @@
                               <asp:Label ID="Label2" runat="server" Text="Interest Rate %"></asp:Label>
                           </td>
                           <td style="text-align:left;">
-                              <asp:TextBox ID="TextBox2" runat="server" Width="212px"></asp:TextBox>
+                              <asp:TextBox ID="txtInterestRate" runat="server" Width="212px"></asp:TextBox>
                            </td>
                       </tr>
                       <tr>
@@ -50,22 +50,26 @@
                               <asp:Label ID="Label3" runat="server" Text="Term"></asp:Label>
                           </td>
                           <td style="text-align:left;">
-                              <asp:TextBox ID="TextBox3" runat="server" Width="212px"></asp:TextBox>
+                              <asp:DropDownList ID="ddlLoanTerm" runat="server" Height="16px" Width="214px">
+                                  <asp:ListItem>60</asp:ListItem>
+                                  <asp:ListItem>120</asp:ListItem>
+                                  <asp:ListItem>240</asp:ListItem>
+                              </asp:DropDownList>
                            </td>
                       </tr>
                       <tr>
-                           <td style="text-align:right;width:50%;">
-                              <asp:Label ID="Label4" runat="server" Text="Additional Payments"></asp:Label>
+                          <td style="text-align:right;width:50%;">
+                              <asp:Label ID="Label7" runat="server" Text="Additional Amount"></asp:Label>
                           </td>
                           <td style="text-align:left;">
-                              <asp:TextBox ID="TextBox4" runat="server" Width="212px"></asp:TextBox>
-                           </td>
+                              <asp:TextBox ID="txtAdditionalAmount" runat="server" Width="212px">0</asp:TextBox>
+                          </td>
                       </tr>
                       <tr>
                            <td style="text-align:right;width:50%;">
                                &nbsp;</td>
                           <td style="text-align:left;">
-                              <asp:Button ID="Button1" runat="server" Text="Calculate" />
+                              <asp:Button ID="btnCalculate" runat="server" Text="Calculate" OnClick="btnCalculate_Click" />
                            </td>
                       </tr>
                       <tr>
@@ -73,7 +77,7 @@
                               <asp:Label ID="Label6" runat="server" Text="Result"></asp:Label>
                           </td>
                           <td style="text-align:left;">
-                              <asp:TextBox ID="TextBox6" runat="server" Width="212px"></asp:TextBox>
+                              <asp:TextBox ID="txtResult" runat="server" Width="212px"></asp:TextBox>
                            </td>
                       </tr>
                   </tbody>
